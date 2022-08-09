@@ -1,0 +1,13 @@
+<div class="container">
+  <h1><%= @task.title %></h1>
+  <h3> <%= link_to "Edit the task", edit_task_path %></h2>
+  <div class="description">
+    <p><%= @task.details %></p>
+  </div>
+  <% if @task.completed %>
+    <p>This task is comepleted.</p>
+    <% else %>
+    <p>This task is not completed yet.</p>
+  <% end %>
+  <div><%= link_to("Back to list", tasks_path, class: :homelink) %></div>
+</div>
